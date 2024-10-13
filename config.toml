@@ -1,0 +1,9 @@
+base_url = "https://kottesh.xyz"
+
+compile_sass = true
+build_search_index = true
+
+[markdown]
+highlight_code = true
+
+[extra]
