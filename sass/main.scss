@@ -2,3 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "HalyardDisplayBook";
+    src: url("/fonts/Halyard-Display-Book.woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BricolageGrotesque-Bold";
+    src: url("/fonts/BricolageGrotesque-Bold.woff2");
+    font-weight: bold;
+    font-size: large;
+}
+
+@font-face {
+    font-family: "Gustavo-Bold";
+    src: url("/fonts/Gustavo-Bold.woff2");
+    font-weight: bold;
+    font-size: large;
+}
+
