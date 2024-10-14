@@ -25,7 +25,7 @@ jobs:
         run: npx tailwindcss -i ./styles/main.css -o ./public/style.css --minify
       
       - name: publish to cloudflare
-        uses: cloudflare/pages-actions@v1
+        uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACC_ID }}
