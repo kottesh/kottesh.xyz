@@ -3,10 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "HalyardDisplayBook";
-    src: url("/fonts/Halyard-Display-Book.woff2");
-    font-weight: normal;
-    font-style: normal;
+    font-family: "HalyardDisplayRegular";
+    src: url("/fonts/Halyard-Display-Regular.woff2");
 }
 
 @font-face {

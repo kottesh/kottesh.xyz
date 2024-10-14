@@ -1,9 +1,37 @@
 base_url = "https://kottesh.xyz"
+title = "kottesh.xyz"
+description = "Bloop Bleep Bip"
 
 compile_sass = false 
 build_search_index = true
 
+generate_feeds = true 
+feed_filenames = ["atom.xml"]
+
+generate_robots_txt = true
+
+
 [markdown]
-highlight_code = false
+highlight_code = false 
+render_emoji = true
+external_links_target_blank = true
+external_links_no_follow = false
+external_links_no_referrer = false
+smart_punctuation = false
+lazy_async_image = false
+bottom_footnotes = true 
+
+[slugify]
+paths = "on"
+taxonomies = "on"
+anchors = "on"
+paths_keep_dates = false
 
 [extra]
+
+nav = [
+    {name = "blog", link="/blog"},
+    {name = "uses", link="/uses"},
+    {name = "now", link="/now"},
+    {name = "about", link="/about"}
+]

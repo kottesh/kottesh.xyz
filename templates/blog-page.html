@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{%block content%}
+<div class="flex flex-col gap-6">
+    <div class="flex flex-col gap-2">
+        <h1 class="text-4xl font-gustavo font-bold">{{ page.title }}</h1>
+        <p class="text-sm font-gustavo">{{ page.date }}</p>
+    </div>
+    <div class="font-halyard text-lg">{{page.content | safe }}</div>
+</div>
+{%endblock content%}

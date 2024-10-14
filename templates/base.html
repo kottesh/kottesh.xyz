@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="{{ config.description }}" />
         <link rel="stylesheet" href="/style.css" />
-        <title>kottesh.xyz</title>
+        <title>{{ config.title }}</title>
     </head>
     <body class="mt-36 mx-auto max-w-2xl bg-black text-white">
         {% block content %} {% endblock %}
