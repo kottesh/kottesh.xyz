@@ -1,0 +1,15 @@
+{
+  "trailingcomma": "es5",
+  "semi": true,
+  "singlequote": false,
+  "plugins": ["prettier-plugin-jinja-template"],
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "jinja-template",
+        "tabwidth": 4
+      }
+    }
+  ]
+}

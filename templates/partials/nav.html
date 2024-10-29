@@ -1,0 +1,69 @@
+<!-- desktop -->
+<div class="flex flex-col items-start sticky">
+  <ul class="text-xl font-gustavo mb-4">
+    {% for route in config.extra.routes %}
+      {% if current_path == route.path %}
+        <li class="pt-2">
+          <a href="{{ route.path }}">{{ route.name }}</a>
+        </li>
+      {% else %}
+        <li class="text-gray-500 pt-2">
+          <a href="{{ route.path }}">{{ route.name }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  <div
+    class="font-halyard flex gap-1 select-none items-center justify-center pt-2"
+  >
+    {% for social in config.extra.socials %}
+      <a
+        class="p-1"
+        title="{{- social.title -}}"
+        target="_blank"
+        href="{{- social.link -}}"
+      >
+        <img
+          src="{{ social.icon }}"
+          class="h-[1.25em] w-[1.25em] opacity-70 hover:opacity-100 transition-opacity duration-300"
+        />
+      </a>
+    {% endfor %}
+  </div>
+
+  <hr />
+  <p class="pt-2 font-halyard text-sm opacity-70">Coimbatore, IN</p>
+</div>
+
+<!-- mobile -->
+<div class="lg:hidden font-gustavo">
+  <div class="flex items-center gap-1">
+    {% for route in config.extra.routes %}
+      {% if route.path == current_path %}
+        <p class="flex items-center">
+          <a href="{{ route.path }}" class="inline-block">{{ route.name }}</a>
+        </p>
+      {% endif %}
+    {% endfor %}
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 256 256"
+      class="text-red-600 fill-current opacity-70 h-[1.25em] w-[1.25em]"
+    >
+      <path d="M200,120H56l72-72Z" opacity="0.2"></path>
+      <path
+        d="M205.66,114.34l-72-72a8,8,0,0,0-11.32,0l-72,72A8,8,0,0,0,56,128H200a8,8,0,0,0,5.66-13.66ZM75.31,112,128,59.31,180.69,112Z"
+      ></path>
+    </svg>
+  </div>
+  <div class="flex flex-col">
+    {% for route in config.extra.routes %}
+      {% if route.path != current_path %}
+        <a href="{{ route.path }}" class="hover:text-black text-gray-400"
+          >{{ route.name }}</a
+        >
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

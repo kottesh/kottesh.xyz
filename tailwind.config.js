@@ -7,10 +7,12 @@ module.exports = {
             fontFamily: {
                 halyard: ["HalyardDisplayRegular", "sans-serif"],
                 bricolagegrotesque: ["BricolageGrotesque-Bold"],
-                gustavo : ["Gustavo-Bold"],
+                gustavo: ["Gustavo-Bold"],
+                plexmono: ["IBM Plex Mono", "monospace"],
             },
         },
     },
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/typography'),
+    ],
 };
-

@@ -1,23 +1,4 @@
 {% extends "base.html" %}
-
 {% block content %}
-
-<div class="flex flex-col gap-6">
-    <ul class="flex flex-row gap-3 justify-end">
-        {% for item in config.extra.nav %}
-            <li>
-                <a href="{{ item.link }}" class="font-halyard text-base">{{ item.name }}</a>
-            </li>
-        {% endfor %}
-    </ul>
-    <div class="flex flex-col">
-        <h1 class="text-4xl font-bold font-gustavo">Hi, I'm kottesh</h1>
-        <p class="pt-6 font-halyard text-lg">
-            I'm a person who is interested in SRE, Devops, Backend Engineering. I
-            like tinkering with my software, Avid Linux User
-            <kbd class="px-2 py-0.5 bg-neutral-400/25 rounded text-white text-xs">(i use arch btw)</kb>
-        </p>
-    </div>
-</div>
-
+  <h1 class="text-4xl font-gustavo font-bold select-none">Ghost</h1>
 {% endblock content %}
