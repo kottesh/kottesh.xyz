@@ -28,5 +28,27 @@
       stroke-width="16"
     />
   </svg>
-  <div class="markdown select-none min-h-screen">{{ section.content | safe }}</div>
+  <div class="markdown select-none">{{ section.content | safe }}</div>
+
+  <footer class="lg:hidden">
+    <hr class="w-full border-t border-gray-300" />
+    <div
+      class="font-halyard flex gap-1 select-none items-center justify-end pt-2"
+    >
+      {% for social in config.extra.socials %}
+        <a
+          class="p-1"
+          title="{{- social.title -}}"
+          target="_blank"
+          href="{{- social.link -}}"
+        >
+          <img
+            src="{{ social.icon }}"
+            class="h-[1.25em] w-[1.25em] opacity-70 hover:opacity-100 transition-opacity duration-300"
+          />
+        </a>
+      {% endfor %}
+    </div>
+  </footer>
+  <div class="min-h-screen"></div>
 {% endblock %}

@@ -13,8 +13,10 @@
   </head>
 
   <body>
-    <div class="container transition-all duration-150 md:mx-auto px-4">
-      <div class="grid grid-cols-4 lg:grid-cols-12 gap-2 pt-16 ">
+    <div class="transition-all duration-150 container mx-auto px-4">
+      <div
+        class="grid grid-cols-4 items-start lg:grid-cols-12 lg:gap-x-4 gap-[2rem] pt-14"
+      >
         {% include "partials/nav.html" %}
         <div class="col-span-4 lg:col-span-6 lg:col-start-5 lg:col-end-11">
           {% block content %}
