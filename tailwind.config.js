@@ -5,7 +5,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                halyard: ["HalyardDisplayRegular", "sans-serif"],
+                halyard: ["HalyardDisplayLight", "sans-serif"],
                 bricolagegrotesque: ["BricolageGrotesque-Bold"],
                 gustavo: ["Gustavo-Bold"],
                 plexmono: ["IBM Plex Mono", "monospace"],

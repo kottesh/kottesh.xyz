@@ -1,6 +1,8 @@
 <!-- desktop -->
-<div class="hidden lg:flex flex-col items-start sticky">
-  <ul class="text-xl font-gustavo mb-4">
+<div
+  class="hidden lg:flex flex-col justify-start items-end sticky col-span-2 col-start-2 col-end-4"
+>
+  <ul class="text-xl font-gustavo mb-4 flex flex-col items-end">
     {% for route in config.extra.routes %}
       {% if current_path == route.path %}
         <li class="pt-2">
@@ -37,30 +39,34 @@
 </div>
 
 <!-- mobile -->
-<div class="lg:hidden font-gustavo">
-  <div class="flex items-center gap-1">
+<div class="lg:hidden font-gustavo col-span-4">
+  <div class="flex items-center gap-1 cursor-pointer top-0 sticky">
     {% for route in config.extra.routes %}
       {% if route.path == current_path %}
-        <p class="flex items-center">
-          <a href="{{ route.path }}" class="inline-block">{{ route.name }}</a>
-        </p>
+        <span class="pb-1"> {{- route.name -}} </span>
       {% endif %}
     {% endfor %}
     <svg
       xmlns="http://www.w3.org/2000/svg"
+      class="h-4 w-4 fill-current text-gray-600"
       viewBox="0 0 256 256"
-      class="text-red-600 fill-current opacity-70 h-[1.25em] w-[1.25em]"
     >
-      <path d="M200,120H56l72-72Z" opacity="0.2"></path>
-      <path
-        d="M205.66,114.34l-72-72a8,8,0,0,0-11.32,0l-72,72A8,8,0,0,0,56,128H200a8,8,0,0,0,5.66-13.66ZM75.31,112,128,59.31,180.69,112Z"
-      ></path>
+      <rect width="256" height="256" fill="none" />
+      <polygon points="96 48 176 128 96 208 96 48" opacity="0.2" />
+      <polygon
+        points="96 48 176 128 96 208 96 48"
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="16"
+      />
     </svg>
   </div>
   <div class="flex flex-col">
     {% for route in config.extra.routes %}
       {% if route.path != current_path %}
-        <a href="{{ route.path }}" class="hover:text-black text-gray-400"
+        <a href="{{ route.path }}" class="hover:text-black text-gray-400 mt-2"
           >{{ route.name }}</a
         >
       {% endif %}

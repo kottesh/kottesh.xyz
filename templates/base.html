@@ -14,9 +14,13 @@
 
   <body>
     <div class="container transition-all duration-150 md:mx-auto px-4">
-      {% include "partials/nav.html" %}
-      {% block content %}
-      {% endblock content %}
+      <div class="grid grid-cols-4 lg:grid-cols-12 gap-2 pt-16 ">
+        {% include "partials/nav.html" %}
+        <div class="col-span-4 lg:col-span-6 lg:col-start-5 lg:col-end-11">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
     </div>
   </body>
 </html>

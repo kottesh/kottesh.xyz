@@ -1,25 +1,165 @@
+@import "./md.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @font-face {
-    font-family: "HalyardDisplayRegular";
-    src: url("/fonts/Halyard-Display-Regular.woff2");
+  font-family: "HalyardDisplayRegular";
+  src: url("/fonts/Halyard-Display-Regular.woff2");
 }
 
 @font-face {
-    font-family: "BricolageGrotesque-Bold";
-    src: url("/fonts/BricolageGrotesque-Bold.woff2");
-    font-weight: bold;
-    font-size: large;
+  font-family: "BricolageGrotesque-Bold";
+  src: url("/fonts/BricolageGrotesque-Bold.woff2");
+  font-weight: bold;
+  font-size: large;
 }
 
 @font-face {
-    font-family: "Gustavo-Bold";
-    src: url("/fonts/Gustavo-Bold.woff2");
-    font-weight: bold;
-    font-size: large;
+  font-family: "Gustavo-Bold";
+  src: url("/fonts/Gustavo-Bold.woff2");
+  font-weight: bold;
+  font-size: large;
+}
+
+@font-face {
+  font-family: "HalyardDisplayLight";
+  src: url("/fonts/HalyardDisplayLight");
+  font-weight: normal;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
 
+/* Base SVG styles */
+.fire-icon {
+  @apply h-16 w-16 relative filter drop-shadow-lg;
+  transform-box: fill-box;
+}
+
+/* Main fire animation with smoother motion */
+.fire-icon path:not(:first-of-type) {
+  @apply origin-bottom;
+  animation: flicker 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 6px rgba(255, 100, 0, 0.5));
+  transform-box: fill-box;
+}
+
+/* Inner flame with gradient */
+.fire-icon path[opacity="0.2"] {
+  @apply fill-current;
+  animation: innerFlame 4s ease-in-out infinite;
+  stop-color: #ef4444; /* red-500 */
+  background: linear-gradient(0deg, #f97316 0%, #ef4444 100%);
+  transform-box: fill-box;
+}
+
+/* Gradient effect for the outer flame */
+.fire-icon path:last-of-type {
+  @apply stroke-red-500;
+  animation: colorShift 4s ease-in-out infinite;
+  transform-box: fill-box;
+}
+
+/* Curve animation with enhanced glow */
+.fire-icon path:first-of-type {
+  @apply stroke-orange-400;
+  animation: curve 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 3px rgba(255, 160, 0, 0.6));
+  transform-box: fill-box;
+}
+
+/* Smoother flicker animation */
+@keyframes flicker {
+  0%,
+  100% {
+    transform: scaleY(1) rotate(0deg);
+    filter: brightness(1);
+  }
+  25% {
+    transform: scaleY(1.05) rotate(0.5deg);
+    filter: brightness(1.05);
+  }
+  50% {
+    transform: scaleY(0.95) rotate(-0.5deg);
+    filter: brightness(0.95);
+  }
+  75% {
+    transform: scaleY(1.02) rotate(0.25deg);
+    filter: brightness(1.02);
+  }
+}
+
+/* Smoother inner flame animation */
+@keyframes innerFlame {
+  0%,
+  100% {
+    opacity: 0.3;
+    @apply text-orange-500;
+  }
+  25% {
+    opacity: 0.35;
+    @apply text-red-500;
+  }
+  50% {
+    opacity: 0.3;
+    @apply text-orange-600;
+  }
+  75% {
+    opacity: 0.4;
+    @apply text-red-400;
+  }
+}
+
+/* Color shift animation */
+@keyframes colorShift {
+  0%,
+  100% {
+    @apply stroke-orange-500;
+  }
+  50% {
+    @apply stroke-red-500;
+  }
+}
+
+/* Smoother curve animation */
+@keyframes curve {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(1px);
+  }
+}
+
+/* Enhanced hover effect */
+.fire-icon:hover path:not(:first-of-type) {
+  animation: flicker 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px rgba(255, 100, 0, 0.7));
+  @apply stroke-red-600;
+}
+
+.fire-icon:hover path[opacity="0.2"] {
+  animation: innerFlame 2s ease-in-out infinite;
+  @apply text-red-500;
+}
+
+/* Glow effect */
+.fire-icon::after {
+  content: "";
+  @apply absolute inset-0 rounded-full;
+  animation: glow 4s infinite;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(249, 115, 22, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+  }
+}

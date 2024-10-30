@@ -31,9 +31,9 @@ paths_keep_dates = false
 
 routes = [
     {name="home", path="/"},
-    {name="blog", path="/blog"},
-    {name="about", path="/about"},
-    {name="pow", path="/pow"}
+    {name="blog", path="/blog/"},
+    {name="about", path="/about/"},
+    {name="pow", path="/pow/"}
 ] 
 
 socials = [

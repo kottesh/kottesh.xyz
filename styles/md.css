@@ -1,0 +1,109 @@
+/* Headings */
+
+.markdown h1,
+h2,
+h3,
+h4 {
+  @apply font-gustavo;
+  @apply mb-2;
+}
+
+.markdown h1 {
+  @apply text-4xl;
+}
+
+.markdown h2 {
+  @apply text-3xl;
+}
+
+.markdown h3 {
+  @apply text-2xl;
+}
+
+.markdown h4 {
+  @apply text-xl;
+}
+
+/* Paragraphs and spacing */
+
+.markdown p {
+  @apply font-halyard;
+  @apply mb-6 leading-relaxed;
+}
+
+/* Lists */
+.markdown ul {
+  @apply list-disc list-inside mb-6 pl-4;
+}
+
+.markdown ol {
+  @apply list-decimal list-inside mb-6 pl-4;
+}
+
+.markdown li {
+  @apply mb-2;
+}
+
+/* Links */
+.markdown a {
+  @apply text-blue-600 dark:text-blue-400 hover:underline;
+}
+
+/* Blockquotes */
+.markdown blockquote {
+  @apply pl-4 border-l-4 border-gray-300 dark:border-gray-700 italic my-6;
+}
+
+/* Code blocks */
+.markdown pre {
+  @apply bg-gray-100 dark:bg-gray-800 rounded-lg p-4 mb-6 overflow-x-auto;
+}
+
+.markdown code {
+  @apply bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded text-sm font-plexmono;
+}
+
+/* Inline code */
+.markdown :not(pre) > code {
+  @apply bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-sm font-plexmono;
+}
+
+/* Tables */
+.markdown table {
+  @apply w-full border-collapse mb-6;
+}
+
+.markdown th {
+  @apply bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 px-4 py-2 text-left;
+}
+
+.markdown td {
+  @apply border border-gray-300 dark:border-gray-700 px-4 py-2;
+}
+
+/* Images */
+.markdown img {
+  @apply max-w-full h-auto rounded-lg my-6;
+}
+
+/* Horizontal rule */
+.markdown hr {
+  @apply my-8 border-t border-gray-300 dark:border-gray-700;
+}
+
+/* Definition lists */
+.markdown dl {
+  @apply mb-6;
+}
+
+.markdown dt {
+  @apply font-bold mb-2;
+}
+
+.markdown dd {
+  @apply pl-4 mb-4;
+}
+
+.markdown a:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2 rounded;
+}
