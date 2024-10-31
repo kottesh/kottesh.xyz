@@ -1,27 +1,42 @@
+{% import "macros.html" as macros %}
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="can't find the page what you are looking for." />
-    <title>NOT FOUND - kottesh.xyz</title>
-    <link rel="stylesheet" href="/style.css" />
-  </head>
-  <body class="transition-all duration-300">
-    <div class="font-gustavo flex justify-center items-center min-h-screen">
-      <div class="text-center">
-        <h1 class="text-6xl">404</h1>
-        <h2 class="text-xl">NOT FOUND</h2>
-        <ul
-          class="flex items-center justify-between font-dm border rounded-md border-gray-400 p-2 gap-2"
-        >
-          {% for route in config.extra.routes %}
-            <li class="hover:bg-slate-400 hover:rounded-sm px-1">
-              <a href="{{ route.path }}">{{ route.name }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>404 | not found</title>
+        <link rel="stylesheet" href="/style.css" />
+    </head>
+    <body>
+        <div class="container mx-auto px-4 max-w-md">
+            <div class="flex flex-col justify-center items-center gap-4 min-h-screen">
+                <div
+                    class="flex justify-center items-center text-zinc-600 text-2xl gap-2 font-halyard font-medium"
+                >
+                    <span>404</span>
+                    <div class="h-6 w-px bg-slate-400 mx-2"></div>
+                    <span>this page could not be found.</span>
+                </div>
+
+                <ul class="w-full">
+                    {% for route in config.extra.routes %}
+                        <a href="{{ route.path }}">
+                            <li
+                                class="hover:translate-x-4 hover:text-orange-600 transition duration-300 ease-in-out text-2xl py-4 font-gustavo"
+                            >
+                                {{- route.name -}}/
+                            </li>
+                            <hr class="border-t border-dashed border-gray-400" />
+                        </a>
+                    {% endfor %}
+                </ul>
+
+                <div
+                    class="flex self-end justify-center items-center gap-4 mt-4 p-2 rounded-xl shadow-2xl border"
+                >
+                    {{ macros::socials() }}
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

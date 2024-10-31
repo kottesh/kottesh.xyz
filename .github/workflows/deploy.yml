@@ -37,5 +37,5 @@ jobs:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACC_ID }}
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          projectName: sk
+          projectName: kottesh 
           directory: public

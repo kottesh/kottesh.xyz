@@ -1,16 +1,16 @@
 {
-  "trailingcomma": "es5",
-  "semi": true,
-  "singlequote": false,
-  "plugins": ["prettier-plugin-jinja-template"],
-  "tabwidth": 4,
-  "printWidth": 90,
-  "overrides": [
-    {
-      "files": "*.html",
-      "options": {
-        "parser": "jinja-template"
-      }
-    }
-  ]
+    "trailingcomma": "es5",
+    "semi": true,
+    "singlequote": false,
+    "plugins": ["prettier-plugin-jinja-template"],
+    "tabWidth": 4,
+    "printWidth": 90,
+    "overrides": [
+        {
+            "files": "*.html",
+            "options": {
+                "parser": "jinja-template"
+            }
+        }
+    ]
 }

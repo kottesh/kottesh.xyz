@@ -1,48 +1,36 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <svg class="fire-icon mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-    <rect width="256" height="256" fill="none" />
-    <path
-      d="M136,192c20-3.37,36.61-20,40-40"
-      fill="none"
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="16"
-    />
-    <path
-      d="M112,96l26.27-72C159.86,41.92,208,88.15,208,144a80,80,0,0,1-160,0c0-30.57,14.42-58.26,31-80Z"
-      opacity="0.2"
-    />
-    <path
-      d="M112,96l26.27-72C159.86,41.92,208,88.15,208,144a80,80,0,0,1-160,0c0-30.57,14.42-58.26,31-80Z"
-      fill="none"
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="16"
-    />
-  </svg>
+    <svg class="fire-icon mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+        <rect width="256" height="256" fill="none" />
+        <path
+            d="M136,192c20-3.37,36.61-20,40-40"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+        />
+        <path
+            d="M112,96l26.27-72C159.86,41.92,208,88.15,208,144a80,80,0,0,1-160,0c0-30.57,14.42-58.26,31-80Z"
+            opacity="0.2"
+        />
+        <path
+            d="M112,96l26.27-72C159.86,41.92,208,88.15,208,144a80,80,0,0,1-160,0c0-30.57,14.42-58.26,31-80Z"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+        />
+    </svg>
 
-  <div class="markdown select-none">{{ section.content | safe }}</div>
+    <div class="markdown select-none">{{ section.content | safe }}</div>
 
-  <footer class="lg:hidden">
-    <hr class="w-full border-t border-gray-300" />
-    <div class="flex gap-1 select-none items-center justify-end pt-2">
-      {% for social in config.extra.socials %}
-        <a
-          class="p-1"
-          title="{{- social.title -}}"
-          target="_blank"
-          href="{{- social.link -}}"
-        >
-          <img
-            src="{{ social.icon }}"
-            class="h-[1.25em] w-[1.25em] opacity-70 hover:opacity-100 transition-opacity duration-300"
-          />
-        </a>
-      {% endfor %}
-    </div>
-  </footer>
+    <footer class="lg:hidden">
+        <hr class="w-full border-t border-gray-300" />
+        <div class="flex gap-1 select-none items-center justify-end pt-2">
+            {{ macros::socials() }}
+        </div>
+    </footer>
 {% endblock %}

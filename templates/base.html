@@ -1,28 +1,35 @@
+{% import "macros.html" as macros %}
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% if page.description %}
-      <meta name="description" content="{{ page.description }}" />
-    {% endif %}
-    <title>
-      {% if page.title %}{{ page.title }}{% else %}{{ config.title }}{% endif %}
-    </title>
-    <link rel="stylesheet" href="/style.css" />
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {% if page.description %}
+            <meta name="description" content="{{ page.description }}" />
+        {% endif %}
+        <title>
+            {% if page.title %}
+                {{ page.title }}
+            {% elif section %}
+                {{ section.title }}
+            {% else %}
+                {{ config.title }}
+            {% endif %}
+        </title>
+        <link rel="stylesheet" href="/style.css" />
+    </head>
 
-  <body>
-    <div class="transition-all duration-150 container mx-auto px-4">
-      <div
-        class="grid grid-cols-4 items-start lg:grid-cols-12 lg:gap-x-4 gap-[1.75em] pt-14"
-      >
-        {% include "partials/nav.html" %}
-        <div class="col-span-4 lg:col-span-6 lg:col-start-5 lg:col-end-11">
-          {% block content %}
-          {% endblock %}
+    <body>
+        <div class="transition-all duration-150 container mx-auto px-4">
+            <div
+                class="grid grid-cols-4 items-start lg:grid-cols-12 lg:gap-x-4 gap-[1.75em] pt-14"
+            >
+                {% include "partials/nav.html" %}
+                <div class="col-span-4 lg:col-span-6 lg:col-start-5 lg:col-end-11">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>

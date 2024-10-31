@@ -1,97 +1,93 @@
+{%- import "macros.html" as macros -%}
 <!-- desktop -->
 <div
-  class="hidden lg:flex flex-col justify-start items-end sticky top-0 col-span-2 col-start-2 col-end-4"
+    class="hidden lg:flex flex-col justify-start items-end sticky top-0 col-span-2 col-start-2 col-end-4"
 >
-  <ul class="text-xl font-gustavo mb-4 flex flex-col items-end">
-    {% for route in config.extra.routes %}
-      {% if current_path == route.path %}
-        <li class="pt-2">
-          <a href="{{ route.path }}">{{ route.name }}</a>
-        </li>
-      {% else %}
-        <li class="text-gray-500 pt-2 hover:text-black">
-          <a href="{{ route.path }}">{{ route.name }}</a>
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
+    <ul class="text-xl font-gustavo mb-4 flex flex-col items-end">
+        {% for route in config.extra.routes %}
+            {% if current_path == route.path %}
+                <li class="pt-2">
+                    <a href="{{ route.path }}">{{ route.name }}</a>
+                </li>
+            {% else %}
+                <li class="text-gray-500 pt-2 hover:text-black">
+                    <a href="{{ route.path }}">{{ route.name }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
 
-  <div class="grid grid-rows-2 items-center">
-    <div class="font-dm flex gap-2 select-none items-center justify-center pt-2">
-      {% for social in config.extra.socials %}
-        <a title="{{- social.title -}}" target="_blank" href="{{- social.link -}}">
-          <img
-            src="{{ social.icon }}"
-            class="h-[1.25em] w-[1.25em] opacity-70 hover:opacity-100 transition-opacity duration-300"
-          />
-        </a>
-      {% endfor %}
+    <div class="grid grid-rows-2 items-center">
+        <div class="font-dm flex gap-2 select-none items-center justify-center pt-2">
+            {{ macros::socials() }}
+        </div>
+        <hr class="w-full border-t border-gray-300" />
     </div>
-    <hr class="w-full border-t border-gray-300" />
-  </div>
-  <p class="font-bold font-dm text-sm opacity-70">Coimbatore, IN</p>
+    <p class="font-bold font-dm text-sm opacity-70">Coimbatore, IN</p>
 </div>
 
 <!-- mobile -->
 <div
-  class="lg:hidden font-gustavo col-span-4 sticky bg-gray-50 top-4 z-10 rounded-md border p-2 select-none drop-shadow-xl"
+    class="lg:hidden font-gustavo col-span-4 sticky bg-gray-50 top-4 z-10 rounded-md border p-2 select-none drop-shadow-xl"
 >
-  <div class="nav flex items-center gap-1">
-    {% for route in config.extra.routes %}
-      {% if route.path == current_path %}
-        <span class="pb-1 inline-block cursor-pointer"> {{- route.name -}} </span>
-      {% endif %}
-    {% endfor %}
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="h-4 w-4 transition-all duration-150 fill-current text-orange-600"
-      viewBox="0 0 256 256"
-    >
-      <rect width="256" height="256" fill="none" />
-      <polygon points="96 48 176 128 96 208 96 48" opacity="0.2" />
-      <polygon
-        points="96 48 176 128 96 208 96 48"
-        fill="none"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="16"
-      />
-    </svg>
-
-    <div class="w-full flex items-center justify-between">
-      {% if page.title and page.date %}
-        <span class="pb-1 self-center cursor-pointer truncate">{{ page.title }}</span>
-      {% endif %}
-      {% if page.date %}
-        <span class="pb-[0.5] font-dm text-sm"
-          >{{ page.date | date(format="%d/%m - %y") }}</span
+    <div class="nav flex items-center gap-1">
+        {% for route in config.extra.routes %}
+            {% if route.path == current_path %}
+                <span class="pb-1 inline-block cursor-pointer"> {{- route.name -}} </span>
+            {% endif %}
+        {% endfor %}
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4 transition-all duration-150 fill-current text-orange-600"
+            viewBox="0 0 256 256"
         >
-      {% endif %}
+            <rect width="256" height="256" fill="none" />
+            <polygon points="96 48 176 128 96 208 96 48" opacity="0.2" />
+            <polygon
+                points="96 48 176 128 96 208 96 48"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+            />
+        </svg>
+
+        <div class="w-full flex items-center justify-between">
+            {% if page.title and page.date %}
+                <span class="pb-1 self-center cursor-pointer truncate"
+                    >{{ page.title }}</span
+                >
+            {% endif %}
+            {% if page.date %}
+                <span class="pb-[0.5] font-dm text-sm"
+                    >{{ page.date | date(format="%d/%m - %y") }}</span
+                >
+            {% endif %}
+        </div>
     </div>
-  </div>
 
-  <div
-    class="menu overflow-hidden flex flex-col transition-all duration-150 ease-in-out max-h-0"
-  >
-    <hr class="mt-2 w-full border-t border-gray-400" />
-    {% for route in config.extra.routes %}
-      {% if route.path != current_path %}
-        <a href="{{ route.path }}" class="hover:text-black text-gray-400 pt-1"
-          >{{ route.name }}</a
-        >
-      {% endif %}
-    {% endfor %}
-  </div>
+    <div
+        class="menu overflow-hidden flex flex-col transition-all duration-150 ease-in-out max-h-0"
+    >
+        <hr class="mt-2 w-full border-t border-gray-400" />
+        {% for route in config.extra.routes %}
+            {% if route.path != current_path %}
+                <a href="{{ route.path }}" class="hover:text-black text-gray-400 pt-1"
+                    >{{ route.name }}</a
+                >
+            {% endif %}
+        {% endfor %}
+    </div>
 </div>
 
 <script>
-  const nav = document.querySelector(".nav");
-  const menu = document.querySelector(".menu");
-  const nav_icon = document.querySelector("svg");
+    const nav = document.querySelector(".nav");
+    const menu = document.querySelector(".menu");
+    const nav_icon = document.querySelector("svg");
 
-  nav.addEventListener("click", () => {
-    menu.classList.toggle("max-h-[1000px]");
-    nav_icon.classList.toggle("rotate-90");
-  });
+    nav.addEventListener("click", () => {
+        menu.classList.toggle("max-h-[1000px]");
+        nav_icon.classList.toggle("rotate-90");
+    });
 </script>

@@ -1,27 +1,27 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <div class="grid gap-3 px-2 lg:px-0 font-dm">
-    {% for year, posts in section.pages | group_by(attribute="year") %}
-      <div class="space-y-2">
-        <div>
-          <h1 class="font-gustavo text-xl">{{ year }}</h1>
-          <hr class="w-full border-dashed border-gray-500" />
-        </div>
-        <ul class="space-y-1">
-          {% for post in posts %}
-            <li>
-              <a
-                class="flex justify-between text-md items-center transition-all duration-150 gap hover:bg-gray-200 hover:rounded-md p-1"
-                href="{{ post.permalink }}"
-              >
-                <span>{{ post.title }}</span>
-                <span>{{ post.date | date(format="%d %b") }}</span>
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    {% endfor %}
-  </div>
+    <div class="grid gap-3 px-2 lg:px-0 font-dm">
+        {% for year, posts in section.pages | group_by(attribute="year") %}
+            <div class="space-y-2">
+                <div>
+                    <h1 class="font-gustavo text-xl">{{ year }}</h1>
+                    <hr class="w-full border-dashed border-gray-500" />
+                </div>
+                <ul class="space-y-1">
+                    {% for post in posts %}
+                        <li>
+                            <a
+                                class="flex justify-between text-md items-center transition-all duration-150 gap hover:bg-gray-200 hover:rounded-md p-1"
+                                href="{{ post.permalink }}"
+                            >
+                                <span>{{ post.title }}</span>
+                                <span>{{ post.date | date(format="%d %b") }}</span>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock content %}

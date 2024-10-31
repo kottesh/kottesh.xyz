@@ -1,0 +1,10 @@
+{% macro socials() %}
+    {% for social in config.extra.socials %}
+        <a title="{{- social.title -}}" target="_blank" href="{{- social.link -}}">
+            <img
+                src="{{ social.icon }}"
+                class="h-[1.25em] w-[1.25em] opacity-70 hover:opacity-100 transition-opacity duration-300"
+            />
+        </a>
+    {% endfor %}
+{% endmacro social %}

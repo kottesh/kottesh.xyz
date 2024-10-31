@@ -1,6 +1,6 @@
 +++
 title = "Typography"
-date = 2018-09-29
+date = 2024-10-29
 draft = false 
 
 [extra]
@@ -10,11 +10,12 @@ toc = true
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.[^1]
 
 > An apple is a sweet, edible fruit produced by an apple tree (Malus pumila). Apple trees are cultivated worldwide, and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today. Apples have been grown for thousands of years in Asia and Europe, and were brought to North America by European colonists. Apples have religious and mythological significance in many cultures, including Norse, Greek and European Christian traditions.[^2]
+
 ---
 
 Inline styles：
 
-**strong**, *emphasis*, ***strong and emphasis***,`code`, <u>underline</u>, ~~strikethrough~~, :joy:🤣, $\LaTeX$, X^2^, H~2~O, ==highlight==, [Link](https://example.com), and image:
+**strong**, _emphasis_, **_strong and emphasis_**,`code`, <u>underline</u>, ~~strikethrough~~, :joy:🤣, $\LaTeX$, X^2^, H~2~O, ==highlight==, [Link](https://example.com), and image:
 
 $$
 f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
@@ -48,15 +49,15 @@ Table:
 
 Lists:
 
-* Unordered list item 1.
-* Unordered list item 2.
+-   Unordered list item 1.
+-   Unordered list item 2.
 
 1. ordered list item 1.
 2. ordered list item 2.
-   + sub-unordered list item 1.
-   + sub-unordered list item 2.
-     + [x] something is DONE.
-     + [ ] something is NOT DONE.
+    - sub-unordered list item 1.
+    - sub-unordered list item 2.
+        - [x] something is DONE.
+        - [ ] something is NOT DONE.
 
 Syntax Highlighting:
 
@@ -64,7 +65,7 @@ Syntax Highlighting:
 const num1 = prompt("Enter first number");
 const num2 = prompt("Enter second number");
 const sum = parseInt(num1, 10) + parseInt(num2, 10); // "+" means "add"
-alert("Sum = " + sum);  // "+" means combine into a string
+alert("Sum = " + sum); // "+" means combine into a string
 ```
 
 [^1]: From [https://www.lipsum.com/](https://www.lipsum.com/)
