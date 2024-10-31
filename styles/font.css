@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap");
+
+@font-face {
+  font-family: "Gustavo-Bold";
+  src: url("/fonts/Gustavo-Bold.woff2");
+  font-weight: bold;
+  font-size: large;
+}
+
+@font-face {
+  font-family: "HalyardDisplayLight";
+  src: url("/fonts/Halyard-Display-Light.woff2");
+}

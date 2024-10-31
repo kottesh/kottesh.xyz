@@ -1,11 +1,12 @@
-/* Headings */
+.markdown {
+  @apply font-dm;
+}
 
 .markdown h1,
 h2,
 h3,
 h4 {
   @apply font-gustavo;
-  @apply mb-2;
 }
 
 .markdown h1 {
@@ -27,7 +28,7 @@ h4 {
 /* Paragraphs and spacing */
 
 .markdown p {
-  @apply font-halyard;
+  @apply font-dm;
   @apply mb-6 leading-relaxed;
 }
 
@@ -56,11 +57,11 @@ h4 {
 
 /* Code blocks */
 .markdown pre {
-  @apply bg-gray-100 dark:bg-gray-800 rounded-lg p-4 mb-6 overflow-x-auto;
+  @apply bg-gray-100 dark:bg-gray-800 rounded-lg p-4 mb-6 overflow-x-auto font-plexmono;
 }
 
 .markdown code {
-  @apply bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded text-sm font-plexmono;
+  @apply bg-gray-100 bg-zinc-500 px-1 py-0.5 rounded text-sm font-plexmono;
 }
 
 /* Inline code */
