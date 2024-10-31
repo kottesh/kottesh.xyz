@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 
-<div class="markdown">
-  {% block content %}
-    {{ page.content | safe }}
-  {% endblock content %}
-</div>
+{% block content %}
+  <div class="markdown">{{ page.content | safe }}</div>
+{% endblock content %}

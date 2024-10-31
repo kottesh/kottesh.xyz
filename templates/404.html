@@ -1,8 +1,27 @@
-{% block content %}
-  <div class="h-screen flex justify-center items-center">
-    <div class="font-gustavo text-center">
-      <h1 class="text-6xl">404</h1>
-      <h2 class="text-xl">NOT FOUND</h2>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="can't find the page what you are looking for." />
+    <title>NOT FOUND - kottesh.xyz</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="transition-all duration-300">
+    <div class="font-gustavo flex justify-center items-center min-h-screen">
+      <div class="text-center">
+        <h1 class="text-6xl">404</h1>
+        <h2 class="text-xl">NOT FOUND</h2>
+        <ul
+          class="flex items-center justify-between font-dm border rounded-md border-gray-400 p-2 gap-2"
+        >
+          {% for route in config.extra.routes %}
+            <li class="hover:bg-slate-400 hover:rounded-sm px-1">
+              <a href="{{ route.path }}">{{ route.name }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
-  </div>
-{% endblock %}
+  </body>
+</html>

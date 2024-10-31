@@ -40,5 +40,5 @@ socials = [
     {title="github", link="https://github.com/kottesh", icon="/icons/github.svg"},
     {title="linkedin", link="https://linkedin.com/in/kottesh", icon="/icons/linkedin.svg"},
     {title="x", link="https://x.com/shreekottes", icon="/icons/x.svg"},
-    {title="say hi@kottesh.xyz", link="mailto:kottezh@gmail.com", icon="/icons/envelope.svg"},
+    {title="say hi@kottesh.xyz", link="mailto:hi@kottesh.xyz", icon="/icons/envelope.svg"},
 ]

@@ -1,6 +1,7 @@
 +++
-title="blog - kottesh.xyz"
-description="all the posts here, are my own views"
+title= "blog"
+sort_by="date"
 template="section.html"
-page_template="page.html"
+page_template="blog.html"
+insert_anchor_links = "heading"
 +++

@@ -1,4 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
+  <div class="hidden lg:block">
+    <div class="flex items-center justify-between">
+      <h1 class="text-4xl font-gustavo pb-2">{{ page.title }}</h1>
+      {% if page.date %}
+        <span class="font-halyard">{{ page.date | date(format="%d/%m - %y") }}</span>
+      {% endif %}
+    </div>
+    <hr class="w-full border-dashed border-gray-500" />
+  </div>
+  <div class="markdown">{{ page.content | safe }}</div>
 {% endblock content %}

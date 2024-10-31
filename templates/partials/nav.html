@@ -17,15 +17,9 @@
   </ul>
 
   <div class="grid grid-rows-2 items-center">
-    <div
-      class="font-halyard flex gap-2 select-none items-center justify-center pt-2"
-    >
+    <div class="font-dm flex gap-2 select-none items-center justify-center pt-2">
       {% for social in config.extra.socials %}
-        <a
-          title="{{- social.title -}}"
-          target="_blank"
-          href="{{- social.link -}}"
-        >
+        <a title="{{- social.title -}}" target="_blank" href="{{- social.link -}}">
           <img
             src="{{ social.icon }}"
             class="h-[1.25em] w-[1.25em] opacity-70 hover:opacity-100 transition-opacity duration-300"
@@ -35,7 +29,7 @@
     </div>
     <hr class="w-full border-t border-gray-300" />
   </div>
-  <p class="font-bold font-halyard text-sm opacity-70">Coimbatore, IN</p>
+  <p class="font-bold font-dm text-sm opacity-70">Coimbatore, IN</p>
 </div>
 
 <!-- mobile -->
@@ -45,9 +39,7 @@
   <div class="nav flex items-center gap-1">
     {% for route in config.extra.routes %}
       {% if route.path == current_path %}
-        <span class="pb-1 inline-block cursor-pointer">
-          {{- route.name -}}
-        </span>
+        <span class="pb-1 inline-block cursor-pointer"> {{- route.name -}} </span>
       {% endif %}
     {% endfor %}
     <svg
@@ -66,10 +58,23 @@
         stroke-width="16"
       />
     </svg>
+
+    <div class="w-full flex items-center justify-between">
+      {% if page.title and page.date %}
+        <span class="pb-1 self-center cursor-pointer truncate">{{ page.title }}</span>
+      {% endif %}
+      {% if page.date %}
+        <span class="pb-[0.5] font-dm text-sm"
+          >{{ page.date | date(format="%d/%m - %y") }}</span
+        >
+      {% endif %}
+    </div>
   </div>
+
   <div
     class="menu overflow-hidden flex flex-col transition-all duration-150 ease-in-out max-h-0"
   >
+    <hr class="mt-2 w-full border-t border-gray-400" />
     {% for route in config.extra.routes %}
       {% if route.path != current_path %}
         <a href="{{ route.path }}" class="hover:text-black text-gray-400 pt-1"

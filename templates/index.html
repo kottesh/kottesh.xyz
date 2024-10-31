@@ -1,11 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <svg
-    class="fire-icon mb-4"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 256 256"
-  >
+  <svg class="fire-icon mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
     <rect width="256" height="256" fill="none" />
     <path
       d="M136,192c20-3.37,36.61-20,40-40"
@@ -28,13 +24,12 @@
       stroke-width="16"
     />
   </svg>
+
   <div class="markdown select-none">{{ section.content | safe }}</div>
 
   <footer class="lg:hidden">
     <hr class="w-full border-t border-gray-300" />
-    <div
-      class="font-halyard flex gap-1 select-none items-center justify-end pt-2"
-    >
+    <div class="flex gap-1 select-none items-center justify-end pt-2">
       {% for social in config.extra.socials %}
         <a
           class="p-1"
@@ -50,5 +45,4 @@
       {% endfor %}
     </div>
   </footer>
-  <div class="min-h-screen"></div>
 {% endblock %}
