@@ -3,6 +3,9 @@ title = "Typography"
 date = 2024-10-29
 draft = false 
 
+[taxonomies]
+tags = ["testing", "zola", "markdown", "rust", "types"]
+
 [extra]
 toc = true
 +++

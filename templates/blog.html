@@ -1,16 +1,31 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="hidden lg:block">
-        <div class="flex items-center justify-between">
-            <h1 class="text-4xl font-gustavo pb-2">{{ page.title }}</h1>
-            {% if page.date %}
-                <span class="font-halyard"
-                    >{{ page.date | date(format="%d/%m - %y") }}</span
+    <div class="hidden lg:block col-span">
+        <div class="grid grid-row">
+            <a href="{{ config.base_url }}/blog">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 text-gray-500 hover:text-gray-600"
+                    fill="#000000"
+                    viewBox="0 0 256 256"
                 >
-            {% endif %}
+                    <path d="M112,56V200L40,128Z" opacity="0.2"></path>
+                    <path
+                        d="M216,120H120V56a8,8,0,0,0-13.66-5.66l-72,72a8,8,0,0,0,0,11.32l72,72A8,8,0,0,0,120,200V136h96a8,8,0,0,0,0-16ZM104,180.69,51.31,128,104,75.31Z"
+                    ></path>
+                </svg>
+            </a>
+            <div class="flex items-center justify-between">
+                <h1 class="text-3xl font-gustavo mb-2">{{ page.title }}</h1>
+                {% if page.date %}
+                    <span class="font-halyard"
+                        >{{ page.date | date(format="%d/%m - %y") }}</span
+                    >
+                {% endif %}
+            </div>
         </div>
-        <hr class="w-full border-dashed border-gray-500" />
+        <hr class="w-full border-dashed border-gray-500 mb-6" />
     </div>
     <div class="markdown">{{ page.content | safe }}</div>
 {% endblock content %}

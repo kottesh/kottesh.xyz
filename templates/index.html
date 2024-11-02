@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 
+{% block title %}
+    {{ page.title }}
+{% endblock title %}
+
 {% block content %}
-    <svg class="fire-icon mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+    <svg class="fire-icon mb-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
         <rect width="256" height="256" fill="none" />
         <path
             d="M136,192c20-3.37,36.61-20,40-40"
@@ -25,11 +29,18 @@
         />
     </svg>
 
-    <div class="markdown select-none">{{ section.content | safe }}</div>
+    <h1 class="lg:text-3xl text-xl font-gustavo pb-4 select-none">
+        hey! I'm Kottesh, a student,
+        <br />
+        aspiring to become to an engineer.
+    </h1>
+    <p class="font-dm text-sm text-gray-600 select-none">
+        I like to work with systems programming, containers, databases, linux.
+    </p>
 
     <footer class="lg:hidden">
-        <hr class="w-full border-t border-gray-300" />
-        <div class="flex gap-1 select-none items-center justify-end pt-2">
+        <hr class="w-full mt-2 border-t border-gray-300" />
+        <div class="flex gap-3 select-none items-center justify-end pt-2">
             {{ macros::socials() }}
         </div>
     </footer>

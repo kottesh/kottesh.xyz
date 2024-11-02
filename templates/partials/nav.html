@@ -18,7 +18,7 @@
     </ul>
 
     <div class="grid grid-rows-2 items-center">
-        <div class="font-dm flex gap-2 select-none items-center justify-center pt-2">
+        <div class="font-dm flex gap-3 select-none items-center justify-center pt-2">
             {{ macros::socials() }}
         </div>
         <hr class="w-full border-t border-gray-300" />
@@ -33,7 +33,9 @@
     <div class="nav flex items-center gap-1">
         {% for route in config.extra.routes %}
             {% if route.path == current_path %}
-                <span class="pb-1 inline-block cursor-pointer"> {{- route.name -}} </span>
+                <span class="pb-1 inline-block cursor-pointer"> 
+                    {{- route.name -}} 
+                </span>
             {% endif %}
         {% endfor %}
         <svg

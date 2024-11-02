@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% set tags = get_taxonomy(kind="tags") %}
+    <div class="flex flex-col gap-2">
+        <div class="hidden lg:block">
+            <div class="flex flex-row justify-between items-center">
+                <h1 class="text-3xl font-gustavo mb-4">tags</h1>
+            </div>
+            <hr class="w-full border border-dashed border-gray-500 mb-4" />
+        </div>
+        <div class="space-x-2 space-y-2">
+            {% for term in tags.items %}
+                <button
+                    class="drop-shadow bg-white px-4 py-px border border-gray-300 rounded-full text-sm font-dm text-gray-800 hover:text-gray-600"
+                >
+                    <a href="{{ term.permalink }}"> # {{ term.name }} </a>
+                </button>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content %}

@@ -7,7 +7,7 @@
     "printWidth": 90,
     "overrides": [
         {
-            "files": "*.html",
+            "files": ["*.html", "*.toml"],
             "options": {
                 "parser": "jinja-template"
             }

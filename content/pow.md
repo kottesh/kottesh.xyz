@@ -3,4 +3,4 @@ title="pow"
 template="page.html"
 +++
 
-WIP
+will redirect to resume pdf...WIP

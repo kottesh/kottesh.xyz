@@ -1,4 +1,4 @@
-title = "kottesh.xyz"
+title = "kottesh"
 description = "Bloop Bleep Bip"
 base_url = "https://kottesh.xyz"
 
@@ -8,6 +8,10 @@ build_search_index = true
 generate_feeds = false 
 feed_filenames = ["atom.xml"]
 
+taxonomies = [
+    {name = "tags", feed = true}
+]
+
 generate_robots_txt = true
 
 
@@ -16,8 +20,8 @@ highlight_code = false
 render_emoji = true
 external_links_target_blank = true
 external_links_no_follow = false
-external_links_no_referrer = false
-smart_punctuation = false
+external_links_no_referrer = false 
+smart_punctuation = true 
 lazy_async_image = false
 bottom_footnotes = true 
 
@@ -28,17 +32,16 @@ anchors = "on"
 paths_keep_dates = false
 
 [extra]
-
 routes = [
-    {name="home", path="/"},
-    {name="blog", path="/blog/"},
-    {name="about", path="/about/"},
-    {name="pow", path="/pow/"}
+    {name = "home", path = "/"},
+    {name = "about", path = "/about/"},
+    {name = "blog", path = "/blog/"},
+    {name = "pow", path = "/pow/"}
 ] 
 
 socials = [
-    {title="github", link="https://github.com/kottesh", icon="/icons/github.svg"},
-    {title="linkedin", link="https://linkedin.com/in/kottesh", icon="/icons/linkedin.svg"},
-    {title="x", link="https://x.com/shreekottes", icon="/icons/x.svg"},
-    {title="say hi@kottesh.xyz", link="mailto:hi@kottesh.xyz", icon="/icons/envelope.svg"},
+    {title = "github", link = "https://github.com/kottesh"},
+    {title = "linkedin", link = "https://linkedin.com/in/kottesh"},
+    {title = "x", link = "https://x.com/shreekottes"},
+    {title = "say hi@kottesh.xyz", link = "mailto:hi@kottesh.xyz"},
 ]

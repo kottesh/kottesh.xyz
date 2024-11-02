@@ -1,95 +1,102 @@
 .markdown {
-    @apply font-dm;
+    @apply font-dm text-gray-800;
 }
 
 .markdown h1,
 h2,
 h3,
 h4 {
-    @apply font-gustavo;
+    @apply font-gustavo font-bold text-gray-900;
 }
 
 .markdown h1 {
-    @apply text-4xl;
+    @apply text-4xl mb-6 mt-8;
 }
 
 .markdown h2 {
-    @apply text-3xl;
+    @apply text-3xl mb-5 mt-7;
 }
 
 .markdown h3 {
-    @apply text-2xl;
+    @apply text-2xl mb-4 mt-6;
 }
 
 .markdown h4 {
-    @apply text-xl;
+    @apply text-xl mb-3 mt-5;
 }
 
 /* Paragraphs and spacing */
-
 .markdown p {
-    @apply font-dm;
-    @apply mb-6 leading-relaxed;
+    @apply font-dm text-gray-700 mb-6 leading-relaxed;
 }
 
 /* Lists */
 .markdown ul {
-    @apply list-disc list-inside mb-6 pl-4;
+    @apply list-disc list-inside mb-6 pl-4 text-gray-700;
 }
 
 .markdown ol {
-    @apply list-decimal list-inside mb-6 pl-4;
+    @apply list-decimal list-inside mb-6 pl-4 text-gray-700;
 }
 
 .markdown li {
-    @apply mb-2;
+    @apply mb-2 leading-relaxed;
 }
 
 /* Links */
 .markdown a {
-    @apply text-blue-600 dark:text-blue-400 hover:underline;
+    @apply text-blue-600 hover:text-blue-700 hover:underline transition-colors duration-200;
 }
 
 /* Blockquotes */
 .markdown blockquote {
-    @apply pl-4 border-l-4 border-gray-300 dark:border-gray-700 italic my-6;
+    @apply pl-4 border-l-4 border-blue-200 italic my-6 text-gray-600 bg-blue-50 py-2 pr-4 rounded-r text-sm;
 }
 
 /* Code blocks */
 .markdown pre {
-    @apply bg-gray-100 dark:bg-gray-800 rounded-lg p-4 mb-6 overflow-x-auto font-plexmono;
+    @apply relative mb-6 font-plexmono overflow-hidden text-sm;
+    padding: 1px;
+    background: linear-gradient(to right bottom, rgb(229, 231, 235), rgb(243, 244, 246));
+    border-radius: 0.75rem;
 }
 
-.markdown code {
-    @apply bg-gray-100 bg-zinc-500 px-1 py-0.5 rounded text-sm font-plexmono;
+/* Inner container for code content */
+.markdown pre > code {
+    @apply block w-full h-full bg-gray-100 rounded-lg p-4 overflow-x-auto text-sm;
+}
+
+/* Code block background */
+.markdown pre code {
+    @apply bg-gray-100;
 }
 
 /* Inline code */
 .markdown :not(pre) > code {
-    @apply bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-sm font-plexmono;
+    @apply bg-gray-50 px-1.5 py-0.5 rounded font-plexmono border border-gray-200 text-sm;
 }
 
 /* Tables */
 .markdown table {
-    @apply w-full border-collapse mb-6;
+    @apply w-full border-collapse mb-6 bg-white;
 }
 
 .markdown th {
-    @apply bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 px-4 py-2 text-left;
+    @apply bg-gray-50 border border-gray-200 px-4 py-2 text-left font-semibold text-gray-700;
 }
 
 .markdown td {
-    @apply border border-gray-300 dark:border-gray-700 px-4 py-2;
+    @apply border border-gray-200 px-4 py-2 text-gray-600;
 }
 
 /* Images */
 .markdown img {
-    @apply max-w-full h-auto rounded-lg my-6;
+    @apply max-w-full h-auto rounded-lg my-6 shadow-sm;
 }
 
 /* Horizontal rule */
 .markdown hr {
-    @apply my-8 border-t border-gray-300 dark:border-gray-700;
+    @apply my-8 border-t border-gray-200;
 }
 
 /* Definition lists */
@@ -98,13 +105,19 @@ h4 {
 }
 
 .markdown dt {
-    @apply font-bold mb-2;
+    @apply font-bold mb-2 text-gray-800;
 }
 
 .markdown dd {
-    @apply pl-4 mb-4;
+    @apply pl-4 mb-4 text-gray-700;
 }
 
+/* Focus states */
 .markdown a:focus {
-    @apply outline-none ring-2 ring-blue-500 ring-offset-2 rounded;
+    @apply outline-none ring-2 ring-blue-400 ring-offset-2 rounded;
+}
+
+/* Selection */
+.markdown ::selection {
+    @apply bg-blue-100 text-gray-900;
 }
