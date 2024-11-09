@@ -12,7 +12,7 @@
         {% for page in term.pages %}
             <a href="{{ page.permalink }}">
                 <div
-                    class="flex flex-row justify-between items-center hover:translate-x-2 ease-in-out transition-all transition-gpu duration-300 px-1 py-4 mb-2"
+                    class="flex flex-row justify-between items-center hover:translate-x-2 ease-in-out transition-all transition-gpu duration-300 mb-2"
                 >
                     <p class="text-xl">{{ page.title }}</p>
                     <p class="text-zinc-500">
@@ -20,6 +20,7 @@
                     </p>
                 </div>
             </a>
+            <hr class="border-t mb-3"/>
         {% endfor %}
     </div>
 {% endblock content %}

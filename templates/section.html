@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <h1 class="hidden lg:block text-3xl font-gustavo mb-4">{{ section.title }}</h1>
     <div class="grid gap-3 px-2 lg:px-0 font-dm">
         {% for year, posts in section.pages | group_by(attribute="year") %}
             <div class="space-y-2">
