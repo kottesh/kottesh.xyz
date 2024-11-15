@@ -36,7 +36,7 @@ routes = [
     {name = "home", path = "/"},
     {name = "about", path = "/about/"},
     {name = "blog", path = "/blog/"},
-    {name = "pow", path = "https://drive.google.com/file/d/1stCeJ1U5CStJVY0fTk3hYz8X0_MA0o83/view?usp=sharing"}
+    {name = "resume", path = "https://drive.google.com/file/d/1stCeJ1U5CStJVY0fTk3hYz8X0_MA0o83/view?usp=sharing"}
 ] 
 
 socials = [
