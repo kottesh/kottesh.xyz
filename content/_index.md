@@ -1,5 +1,6 @@
 +++
-template="index.html"
+template = "index.html"
+title = "kottesh.xyz"
 +++
 
 ### Hey! I'm Kottesh, a student,

@@ -3,26 +3,32 @@
 {% block content %}
     <h1 class="hidden lg:block text-3xl font-gustavo mb-4">{{ section.title }}</h1>
     <div class="grid gap-3 px-2 lg:px-0 font-dm">
-        {% for year, posts in section.pages | group_by(attribute="year") %}
-            <div class="space-y-2">
-                <div>
-                    <h1 class="font-gustavo text-xl">{{ year }}</h1>
-                    <hr class="w-full border-dashed border-gray-500" />
-                </div>
-                <ul class="space-y-1">
-                    {% for post in posts %}
-                        <li>
-                            <a
-                                class="flex justify-between text-md items-center transition-all duration-150 gap hover:bg-gray-200 hover:rounded-md p-1"
-                                href="{{ post.permalink }}"
-                            >
-                                <span>{{ post.title }}</span>
-                                <span>{{ post.date | date(format="%d %b") }}</span>
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
+        {% if not section.pages %}
+            <div class="mt-24 font-halyard text-xl flex justify-center items-center">
+                i haven't written anything yet :)
             </div>
-        {% endfor %}
+        {% else %}
+            {% for year, posts in section.pages | group_by(attribute="year") %}
+                <div class="space-y-2">
+                    <div>
+                        <h1 class="font-gustavo text-xl">{{ year }}</h1>
+                        <hr class="w-full border-dashed border-gray-500" />
+                    </div>
+                    <ul class="space-y-1">
+                        {% for post in posts %}
+                            <li>
+                                <a
+                                    class="font-dm flex justify-between text-md items-center transition-all duration-150 gap hover:bg-gray-200 hover:rounded-md p-1"
+                                    href="{{ post.permalink }}"
+                                >
+                                    <span>{{ post.title }}</span>
+                                    <span>{{ post.date | date(format="%d %b") }}</span>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+        {% endif %}
     </div>
 {% endblock content %}
