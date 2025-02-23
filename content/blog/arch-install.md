@@ -41,3 +41,4 @@ I'll create three partition for the system such as;
 -   Remaining in my case its 470G for the root(/) file system.
 
 "then format the drives and then do pacstrap for installing system base packages."
+
