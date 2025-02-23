@@ -2,7 +2,6 @@
 title = "KLA Corp 2025"
 description = "The Interview at KLA Corp."
 template = "fly.html"
-date = 2025-02-22
 +++
 
 This write up contains the things that were happened during the KLA Men's Drive 2025 for the SQE Intern role on 12 Feb 2025.

@@ -36,8 +36,8 @@ routes = [
     {name = "home", path = "/"},
     {name = "about", path = "/about/"},
     {name = "blog", path = "/blog/"},
-    {name = "notes", path = "/notes"},
-    {name = "resume", path = "https://drive.google.com/file/d/13GIrDMXAGNsy4e60ylp7nmC4pbXzCS7P/view?usp=sharing"}
+    {name = "notes", path = "/notes/"},
+    {name = "resume", path = "/resume.pdf"}
 ] 
 
 socials = [

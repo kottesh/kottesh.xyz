@@ -58,7 +58,7 @@ h4 {
     @apply relative mb-6 font-plexmono overflow-hidden text-sm;
     padding: 1px;
     background: linear-gradient(to right bottom, rgb(229, 231, 235), rgb(243, 244, 246));
-    border-radius: 0.75rem;
+    border-radius: 0.5rem;
 }
 
 /* Inner container for code content */
@@ -68,7 +68,7 @@ h4 {
 
 /* Code block background */
 .markdown pre code {
-    @apply bg-gray-100;
+    @apply bg-gray-100 font-plexmono;
 }
 
 /* Inline code */
