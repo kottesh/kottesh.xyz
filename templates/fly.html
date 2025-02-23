@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {% if page.description %}
+            <meta name="description" content="{{ page.description }}" />
+        {% endif %}
+        <title>
+            {% if page.title %}
+                {{ page.title }}
+            {% elif section %}
+                {{ section.title }}
+            {% else %}
+                {{ config.title }}
+            {% endif %}
+        </title>
+        <link rel="stylesheet" href="/style.css" />
+    </head>
+
+    <body>
+        <div class="transition-all duration-150 container mx-auto px-4">
+            <div class="grid grid-cols-4 items-start lg:grid-cols-12 lg:gap-x-4 gap-3 pt-14">
+                {% include "partials/nav.html" %}
+                <div class="col-span-4 lg:col-span-6 lg:col-start-5 lg:col-end-11">
+                    <div class="hidden lg:flex justify-between items-center pb-4">
+                        <h1 class="text-3xl font-gustavo">{{ page.title }}</h1>
+                        {% if page.date %}
+                        <span class="font-dm text-sm text-gray-500">{{ page.date | date(format="%d/%m - %y") }}</span>
+                        {% endif %}
+                    </div>
+                    <!--mobile-->
+                    {% if page.date %}
+                    <div class="lg:hidden font-dm text-sm text-gray-500 pb-4">{{ page.date | date(format="%d/%m - %y") }}</div>
+                    {% endif %}
+                    <div class="markdown">{{ page.content | safe }}</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
