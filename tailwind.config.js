@@ -9,6 +9,7 @@ module.exports = {
         bricolagegrotesque: ["BricolageGrotesque-Bold"],
         gustavo: ["Gustavo-Bold"],
         dm: ['"DM Sans"'],
+        inter: ['"Inter"'],
         plexmono: ["IBM Plex Mono", "monospace"],
       },
     },

@@ -34,9 +34,8 @@ paths_keep_dates = false
 [extra]
 routes = [
     {name = "home", path = "/"},
+    {name = "posts", path = "/posts/"},
     {name = "about", path = "/about/"},
-    {name = "blog", path = "/blog/"},
-    {name = "notes", path = "/notes/"},
     {name = "resume", path = "/resume.pdf"}
 ] 
 

@@ -1,7 +1,7 @@
 +++
 title = "about"
 description = "me about me"
-template = "page.html"
+template = "posts.html"
 +++
 
 Hiya, fellow internet scroller. I'm **kottesh** you may also find me in the name of `criptr` on the internet.
@@ -9,7 +9,7 @@ I like to work on systems programming, linux, containers etc., I used to play te
 
 I love to rice my arch install and this is how it looks, find the dotfiles [here](https://github.com/kottesh/dots).
 
-![riceeeeeyyyyyyy...](../images/20250223-195706.png)
+![screenshot displaying my current arch system.](../images/20250223-195706.webp)
 
 ## contact
 

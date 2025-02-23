@@ -1,10 +1,14 @@
 +++
 title = "KLA Corp 2025"
 description = "The Interview at KLA Corp."
-template = "fly.html"
+template = "posts.html"
+date = 2025-02-22
 +++
 
-This write up contains the things that were happened during the KLA Men's Drive 2025 for the SQE Intern role on 12 Feb 2025.
+<div class="flex items-center">
+    This write up contains the things that were happened during the KLA Men's Drive 2025 for the SQE Intern role on 12 Feb 2025.
+    <img class="!rounded-none !w-20 !m-0 px-2 !shadow-none" src="../images/kla.webp">
+</div>
 
 ## ROUND 1
 
@@ -58,3 +62,8 @@ With the current architecture, `lock` may occur while all the test clients and t
 - How much you are interested to join KLA ?
 - What did your seniors say about KLA ?
 - General discussions on KLA and SQE Intern role.
+
+> I'm not sure if the interviewer was from HR since he was talking about a lot of technical stuff. 
+
+Uff...That's all about the interview rounds. Only thing is to be technically enough to some level, So you could tackle the different counter questions. Communicate with the interviewer more, speak out while you are thinking.
+

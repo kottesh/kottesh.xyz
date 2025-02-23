@@ -39,8 +39,14 @@
                 {% set_global found = true %}
             {% endif %}
         {% endfor %}
-        {% if not found %}
-            <span class="pb-1 inline-block cursor-pointer"> {{ page.title }} </span>
+        {% if not found and page.title %}
+            <span class="pb-1 inline-block cursor-pointer">
+            {% if page.title %}
+                {{ page.title }} 
+            {% else %}
+                navigate
+            {% endif %}
+            </span>
         {% endif %}
 
         <svg

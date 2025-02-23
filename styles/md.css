@@ -50,7 +50,11 @@ h4 {
 
 /* Blockquotes */
 .markdown blockquote {
-    @apply pl-4 border-l-4 border-blue-200 italic my-6 text-gray-600 bg-blue-50 py-2 pr-4 rounded-r text-sm;
+    @apply pl-4 border-l-4 border-blue-200 my-4 italic text-gray-600 bg-blue-50 py-2 pr-4 rounded-r text-sm;
+}
+
+.markdown blockquote > p {
+    @apply m-0 font-inter; 
 }
 
 /* Code blocks */
@@ -91,7 +95,7 @@ h4 {
 
 /* Images */
 .markdown img {
-    @apply max-w-full h-auto rounded-lg my-6 shadow-sm;
+    @apply max-w-full h-auto rounded-lg my-6 shadow-sm; 
 }
 
 /* Horizontal rule */

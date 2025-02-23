@@ -2,7 +2,7 @@
 title = "The Arch Install"
 description = "The Adventure of Installing Arch."
 date = 2023-12-31
-draft = true
+draft = true 
 
 [taxonomies]
 tags = ["zola"]
