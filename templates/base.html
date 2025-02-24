@@ -16,14 +16,12 @@
                 {{ config.title }}
             {% endif %}
         </title>
-        <link rel="stylesheet" href="/style.css" />
+        <link rel="stylesheet" href="{{ get_url(path="style.css") }}?v={{ now() | date(format="%Y%m%d%H%M%S") }}" />
     </head>
 
     <body>
         <div class="transition-all duration-150 container mx-auto px-4">
-            <div
-                class="grid grid-cols-4 items-start lg:grid-cols-12 lg:gap-x-4 gap-4 pt-14"
-            >
+            <div class="grid grid-cols-4 items-start lg:grid-cols-12 lg:gap-x-4 gap-4 pt-14 pb-12">
                 {% include "partials/nav.html" %}
                 <div class="col-span-4 lg:col-span-6 lg:col-start-5 lg:col-end-11">
                     {% block content %}

@@ -27,7 +27,7 @@ h4 {
 
 /* Paragraphs and spacing */
 .markdown p {
-    @apply font-dm text-gray-700 mb-6 leading-relaxed;
+    @apply font-dm text-gray-700 mb-2 leading-relaxed;
 }
 
 /* Lists */
@@ -40,7 +40,7 @@ h4 {
 }
 
 .markdown li {
-    @apply mb-2 leading-relaxed;
+    @apply leading-relaxed;
 }
 
 /* Links */

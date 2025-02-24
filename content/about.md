@@ -9,7 +9,7 @@ I like to work on systems programming, linux, containers etc., I used to play te
 
 I love to rice my arch install and this is how it looks, find the dotfiles [here](https://github.com/kottesh/dots).
 
-![screenshot displaying my current arch system.](../images/20250223-195706.webp)
+<img class="" alt="screenshot displaying my current arch system" src="../images/20250223-195706.webp">
 
 ## contact
 
