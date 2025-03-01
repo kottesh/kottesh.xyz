@@ -7,7 +7,7 @@ date = 2025-02-22
 
 <div class="flex items-center">
     This write up contains the things that were happened during the KLA Men's Drive 2025 for the SQE Intern role on 12 Feb 2025.
-    <img class="!rounded-none !w-20 !mx-1 !shadow-none" src="../images/kla.webp">
+    <img class="!rounded-none !w-20 !mx-1 !shadow-none" src="https://cdn.kottesh.xyz/f/d738dd4b3a75.webp">
 </div>
 
 ## ROUND 1
@@ -48,7 +48,7 @@ How would you validate these entries and how will you store it ?
 
 Redesigning the Architecture.
 
-![](./KLA_R3.svg)
+![](https://cdn.kottesh.xyz/f/be05b7f0af66.svg)
 
 In this architecture, There are 'N' clients running some automated tests and sending step-by-step tests results to the database. And there is a web app that fetches results from the database to display it on the frontend.
 
