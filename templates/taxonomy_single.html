@@ -2,25 +2,23 @@
 
 {% block content %}
     <div class="font-dm">
-        <div class="hidden lg:block">
-            <div class="flex flex-row justify-between items-center">
-                <h1 class="text-3xl font-gustavo mb-4"># {{ term.name }}</h1>
-                <p><span class="font-bold">Posts:</span> {{ term.page_count }}</p>
-            </div>
-            <hr class="w-full border border-dashed border-gray-500 mb-4" />
-        </div>
-        {% for page in term.pages %}
-            <a href="{{ page.permalink }}">
-                <div
-                    class="flex flex-row justify-between items-center hover:translate-x-2 ease-in-out transition-all transition-gpu duration-300 mb-2"
-                >
-                    <p class="text-xl">{{ page.title }}</p>
-                    <p class="text-zinc-500">
-                        {{ page.date | date(format="%d/%m - %y") }}
-                    </p>
-                </div>
-            </a>
-            <hr class="border-t mb-3"/>
-        {% endfor %}
+        <h1 class="hidden lg:block text-2xl font-gustavo mb-4"># {{ term.name }}</h1>
+        <hr class="hidden lg:block 
+        w-full border-1 border-gray-300 mb-4" />
+        <ul>
+            {% for post in term.pages %}
+                <li class="flex justify-between text-md pb-3">
+                    <div class="flex flex-col">
+                        <span class="underline hover:decoration-gray-400 decoration-gray-600"><a href="{{ post.permalink }}">{{ post.title }}</a></span>
+                        {% if post.description %}
+                            <span class="pt-2 text-gray-500">{{ post.description }}</span>
+                        {% endif %}
+                    </div>
+                    {% if post.date %}
+                    <span>{{ post.date | date(format="%d %b") }}</span>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
     </div>
 {% endblock content %}

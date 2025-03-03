@@ -9,11 +9,10 @@ generate_feeds = false
 feed_filenames = ["atom.xml"]
 
 taxonomies = [
-    {name = "tags", feed = true}
+    { name = "tags", feed = true},
 ]
 
 generate_robots_txt = true
-
 
 [markdown]
 highlight_code = false 
@@ -36,7 +35,7 @@ routes = [
     {name = "home", path = "/"},
     {name = "posts", path = "/posts/"},
     {name = "about", path = "/about/"},
-    {name = "resume", path = "/resume.pdf"}
+    {name = "resume", path = "https://cdn.kottesh.xyz/f/5f3d417bd6bb.pdf"}
 ] 
 
 socials = [
@@ -45,3 +44,4 @@ socials = [
     {title = "x", link = "https://x.com/shreekottes"},
     {title = "say hi@kottesh.xyz", link = "mailto:hi@kottesh.xyz"},
 ]
+

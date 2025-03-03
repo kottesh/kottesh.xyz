@@ -39,12 +39,12 @@
                 {% set_global found = true %}
             {% endif %}
         {% endfor %}
-        {% if not found and page.title %}
+        {% if not found %}
             <span class="pb-1 inline-block cursor-pointer">
             {% if page.title %}
                 {{ page.title }} 
             {% else %}
-                navigate
+                {{ current_path | split(pat='/') | reverse | nth(n=1) }} {# for tags #}
             {% endif %}
             </span>
         {% endif %}

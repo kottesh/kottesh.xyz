@@ -2,6 +2,9 @@
 title = "Fix GRUB"
 description = "recover grub install."
 date = 2025-02-16
+
+[taxonomies]
+tags = ["efi", "grub", "linux"]
 +++
 
 Sometimes I do the normal updates in my windows and it blows up the GRUB. And everytime I forget the steps I have done before to fix it, so to be a note for me I write this.
