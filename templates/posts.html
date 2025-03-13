@@ -3,16 +3,16 @@
 <div class="hidden lg:flex justify-between items-center pb-4">
     <h1 class="text-3xl font-gustavo">{{ page.title }}</h1>
         {% if page.date %}
-        <span class="font-dm text-sm text-gray-500">{{ page.date | date(format="%d/%m - %y") }}</span>
+        <span class="font-manrope text-sm text-gray-500">{{ page.date | date(format="%d/%m - %y") }}</span>
         {% endif %}
     </div>
     <!--mobile-->
     {% if page.date %}
-    <div class="lg:hidden font-dm text-sm text-gray-500 pb-4">{{ page.date | date(format="%d/%m - %y") }}</div>
+    <div class="lg:hidden font-manrope text-sm text-gray-500 pb-4">{{ page.date | date(format="%d/%m - %y") }}</div>
     {% endif %}
     <div class="markdown">{{ page.content | safe }}</div>
     <hr class="bg-gray-400 border-none h-[1px] my-10">
-    <footer class="flex flex-col items-end justify-center gap-8 mb-8 font-dm">
+    <footer class="flex flex-col items-end justify-center gap-8 mb-8 font-manrope">
         {% if page.taxonomies %}
             <div class="flex gap-3 self-start items-center">
                 {% for term, values in page.taxonomies %}

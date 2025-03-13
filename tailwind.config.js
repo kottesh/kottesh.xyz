@@ -10,6 +10,7 @@ module.exports = {
         gustavo: ["Gustavo-Bold"],
         dm: ['"DM Sans"'],
         inter: ['"Inter"'],
+        manrope: ['"Manrope"'],
         plexmono: ["IBM Plex Mono", "monospace"],
       },
     },
