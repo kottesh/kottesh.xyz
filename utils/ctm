@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+# ctm -> create template
+
+# set -x # print to stdout
+set -euo pipefail
+
+# check slug
+if [[ $# -eq 0 ]]; then
+	echo "USAGE: ${0} <slug>"
+	exit 1
+fi
+
+# set necessary variables
+POST=$1
+FILE_PATH="content/posts/${POST}.md"
+TITLE=$(echo $POST | sed "s/-/\ /g" | sed -e "s/\b\(.\)/\u\1/g")
+
+# check for existence of file
+if [[ -e $FILE_PATH ]]; then
+	echo "$0: '${POST}' already exists."
+	exit 10 
+fi
+
+# front page matter
+cat << EOF > ${FILE_PATH}
++++
+title = "$TITLE"
+description = " "
+date = $(date +"%Y-%m-%d") 
+draft = true 
+
+[taxonomies]
+tags = []
+
+[extra]
+toc = false
++++
+
+EOF
+
+if [[ $? -eq 0 ]]; then
+	echo "'${FILE_PATH}' created."
+fi
