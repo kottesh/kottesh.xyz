@@ -2,6 +2,7 @@
   "scripts": {
     "build": "zola build && npx tailwindcss -i ./styles/main.css -o ./public/style.css -m",
     "serve": "zola serve --interface 0.0.0.0 & npx tailwindcss -i ./styles/main.css -o ./public/style.css --watch && wait",
+    "dserve": "zola serve --interface 0.0.0.0 --drafts & npx tailwindcss -i ./styles/main.css -o ./public/style.css --watch && wait",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {

@@ -9,7 +9,7 @@ I like to work on systems programming, linux, containers etc., I used to play te
 
 I love to rice my arch install and this is how it looks, find the dotfiles [here](https://github.com/kottesh/dots).
 
-<img class="" alt="screenshot displaying my current arch system" src="https://cdn.kottesh.xyz/f/4cb1f7a795de.png">
+<img class="" alt="screenshot displaying my current arch system" src="https://cdn.kottesh.xyz/f/2ec6720bc0f7.png">
 
 ## contact
 
@@ -22,3 +22,4 @@ other ways to find me.
 ## colophon
 
 This site is built using [zola](https://github.com/getzola/zola) a static site generator, styling is done with [tailwind css](https://tailwindcss.com).
+
