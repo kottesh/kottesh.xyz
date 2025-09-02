@@ -35,7 +35,7 @@ routes = [
     {name = "home", path = "/"},
     {name = "posts", path = "/posts/"},
     {name = "about", path = "/about/"},
-    {name = "resume", path = "https://cdn.kottesh.xyz/f/5f3d417bd6bb.pdf"}
+    {name = "resume", path = "https://cdn.kottesh.xyz/f/f4ba5e408465.pdf"}
 ] 
 
 socials = [
